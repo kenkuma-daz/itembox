@@ -129,6 +129,15 @@ namespace itembox.items {
         //% itemKind.shadow="item_kind_enum_shim"
         //% img.shadow="screen_image_picker"
         add(itemKind:number, img: Image) {
+
+            let found = this._items.some((_item: Item, index: number) => {
+                return _item._kind == itemKind;
+            });
+            if( found )
+                return;
+
+            this._findListenerByKind(itemKind)
+
             let sprite = sprites.create(img, SpriteKind.ItemBox);
             let item = new Item(itemKind, sprite);
             this._items.push(item);
