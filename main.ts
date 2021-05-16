@@ -142,11 +142,6 @@ namespace itembox.items {
             if( found )
                 return;
 
-            // this._findListenerByKind(itemKind)
-
-            console.log("add() kind:" + itemKind);
-
-
             let sprite = sprites.create(img, SpriteKind.ItemBox);
             let item = new Item(itemKind, sprite);
             this._items.push(item);
@@ -303,7 +298,6 @@ namespace itembox.util {
     export function onEvent(itemKind: number, handler: () => void) {
         let listener = itembox.listeners.findListenerByKind(_listeners, itemKind);
         if( !listener ) {
-            console.log("add listener kind:" + itemKind);
             listener = new itembox.listeners.Listener();
             listener._kind = itemKind;
             _listeners.push(listener);
