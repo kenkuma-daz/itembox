@@ -271,8 +271,8 @@ namespace itembox.util {
     //% block="Item $arg"
     //% enumName="ItemKind"
     //% enumMemberName="itemKind"
-    //% enumPromptHint="e.g. Green, Orange, ..."
-    //% enumInitialMembers="Hammer, Wall, Ladder, Gun, Sword"
+    //% enumPromptHint="e.g. ItemName, WeaponName, ..."
+    //% enumInitialMembers="Hammer, Wall, Ladder, Gun, Sword, Whip, JumpBoots"
     export function _itemKindEnumShim(arg: number) {
         // This function should do nothing, but must take in a single
         // argument of type number and return a number value.
